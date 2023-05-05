@@ -9,10 +9,10 @@ subdomain () {
 
 if [ "$#" == 2 ]
 then
-  subdomain "$1" "$2"[ "$#" == 1 ]
+  subdomain "$1" "$2"
 else
-  subdomain "$1" "www"
-  subdomain "$1" "lb-01"
-  subdomain "$1" "web-01"
-  subdomain "$1" "web-02"
+  subdomain "www.$1" www
+  subdomain "lb-01.$1" lb-01
+  subdomain "web-01.$1" web-01
+  subdomain "web-02.$1" web-02
 fi
